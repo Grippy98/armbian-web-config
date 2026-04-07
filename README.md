@@ -1,6 +1,6 @@
 # Armbian Web Setup
 
-A local web-based configuration wizard designed to help initialize newly flashed Armbian device. It guides the user through setting up admin and user accounts, configuring locales and timezones, and optionally connecting to a Wi-Fi network.
+A local web-based configuration wizard designed to help initialize newly flashed Armbian devices. It guides the user through setting up admin and user accounts, configuring locales and timezones, and optionally connecting to a Wi-Fi network.
 
 Uses Armbian Autoconfig - https://docs.armbian.com/User-Guide_Autoconfig/
 
