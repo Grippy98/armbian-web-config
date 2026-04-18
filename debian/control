@@ -7,7 +7,7 @@ Standards-Version: 4.5.1
 
 Package: armbian-web-config
 Architecture: all
-Depends: ${misc:Depends}, python3, python3-flask, network-manager, sudo, cracklib-runtime
+Depends: ${misc:Depends}, python3, python3-flask, network-manager, dnsmasq-base, sudo, cracklib-runtime
 Description: Web-based initial setup tool for Armbian
  This package provides a browser-based counterpart to armbian-firstlogin,
  allowing users to easily configure their device over an access point.
