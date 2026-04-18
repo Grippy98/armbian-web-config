@@ -149,13 +149,13 @@ def setup():
 
     # Disable this web config service
     os.system("systemctl disable armbian-web-config.service &")
-    
-    # Enable the native first login script to run on boot
-    os.system("systemctl enable armbian-firstlogin &")
-    
-    # Schedule a reboot rather than running firstlogin directly to apply properly
-    os.system("(sleep 3 && reboot) &")
-    
+
+    # Shutdown AP
+    os.system("(nmcli con down Hotspot || true) &")
+
+    # Run firstlogin script to apply settings immediately.
+    os.system("(sleep 3 && bash /usr/lib/armbian/armbian-firstlogin; rm -f /root/.not_logged_in_yet) &")
+
     return jsonify({"status": "success", "wifi": bool(wifi_ssid)})
 
 if __name__ == '__main__':
